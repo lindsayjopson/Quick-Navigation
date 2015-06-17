@@ -1,0 +1,123 @@
+$brand-primary: #ccc;
+$button-padding: 10px;
+$button-color: $brand-primary;
+$button-text-color: #ffffff;
+$header-height: $button-padding * 3.5;
+$quick_nav-left-width: 250px;
+$menu-indicatior-text: "MENU";
+a{
+
+  color: $button-text-color;
+  padding: $button-padding;
+  display: block;
+  //resets
+  text-decoration: none;
+
+}
+
+.quick_nav{
+  background-color: $brand-primary;
+  height: $header-height;
+  ul{
+    margin: 0;
+    padding: 0;
+  }
+  li{
+    list-style: none;
+    background-color: $button-color;
+  }
+}
+
+
+.quick_nav--flat{
+  position: relative;
+  li{
+    float: left;
+    &:hover{
+      background-color: darken($button-color, 5);
+      li{
+        display: block;
+      }
+    }
+    ul{
+      position: absolute;
+      top: $header-height;
+      left: 0;
+      width: 100%;
+      a{
+        background-color: darken($button-color, 5);
+        &:hover{
+          background-color: darken($button-color, 10)
+        }
+      }
+      li{
+        display: none;
+      }
+    }
+  }
+  @for $i from 1 through 4 {
+    li:first-child:nth-last-child(#{$i}),
+    li:first-child:nth-last-child(#{$i}) ~ li {
+      width: 100% / $i
+    }
+  }
+}
+
+.quick_nav--left{
+  width: $quick_nav-left-width;
+  ul{
+    > li{
+      &:hover{
+        ul{
+          display: block;
+        }
+      }
+    }
+    ul{
+      display: none;
+      li{
+        background-color: darken($button-color, 5);
+        &:hover{
+          background-color: darken($button-color, 10);
+        }
+      }
+    }
+  }
+}
+
+.quick_nav--offcanvas{
+  position: relative;
+  &.expanded{
+    left: 0;
+  }
+  button{
+    background-color: transparent;
+    border: 0;
+    &:hover{
+      cursor: pointer;
+    }
+    &:focus{
+      outline: none;
+    }
+    &:after{
+      position: absolute;
+      background-color: $button-color;
+      color: $button-text-color;
+      content: $menu-indicatior-text;
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      right: calc(-60px);
+      top: 0;
+      font-size: 14px;
+    }
+  }
+  left: -$quick_nav-left-width;
+  @extend .quick_nav--left;
+}
+
+//general body demo styling
+body{
+  margin: 0;
+  font-family: Arial;
+}

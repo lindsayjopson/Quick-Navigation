@@ -1,0 +1,110 @@
+/* line 8, C:/dev/quicknav/quicknav.scss */
+a {
+  color: #ffffff;
+  padding: 10px;
+  display: block;
+  text-decoration: none; }
+
+/* line 18, C:/dev/quicknav/quicknav.scss */
+.quick_nav {
+  background-color: #ccc;
+  height: 35px; }
+  /* line 21, C:/dev/quicknav/quicknav.scss */
+  .quick_nav ul {
+    margin: 0;
+    padding: 0; }
+  /* line 25, C:/dev/quicknav/quicknav.scss */
+  .quick_nav li {
+    list-style: none;
+    background-color: #ccc; }
+
+/* line 32, C:/dev/quicknav/quicknav.scss */
+.quick_nav--flat {
+  position: relative; }
+  /* line 34, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--flat li {
+    float: left; }
+    /* line 36, C:/dev/quicknav/quicknav.scss */
+    .quick_nav--flat li:hover {
+      background-color: #bfbfbf; }
+      /* line 38, C:/dev/quicknav/quicknav.scss */
+      .quick_nav--flat li:hover li {
+        display: block; }
+    /* line 42, C:/dev/quicknav/quicknav.scss */
+    .quick_nav--flat li ul {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      width: 100%; }
+      /* line 47, C:/dev/quicknav/quicknav.scss */
+      .quick_nav--flat li ul a {
+        background-color: #bfbfbf; }
+        /* line 49, C:/dev/quicknav/quicknav.scss */
+        .quick_nav--flat li ul a:hover {
+          background-color: #b3b3b3; }
+      /* line 53, C:/dev/quicknav/quicknav.scss */
+      .quick_nav--flat li ul li {
+        display: none; }
+  /* line 59, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--flat li:first-child:nth-last-child(1), .quick_nav--flat li:first-child:nth-last-child(1) ~ li {
+    width: 100%; }
+  /* line 59, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--flat li:first-child:nth-last-child(2), .quick_nav--flat li:first-child:nth-last-child(2) ~ li {
+    width: 50%; }
+  /* line 59, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--flat li:first-child:nth-last-child(3), .quick_nav--flat li:first-child:nth-last-child(3) ~ li {
+    width: 33.333333333%; }
+  /* line 59, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--flat li:first-child:nth-last-child(4), .quick_nav--flat li:first-child:nth-last-child(4) ~ li {
+    width: 25%; }
+
+/* line 65, C:/dev/quicknav/quicknav.scss */
+.quick_nav--left, .quick_nav--offcanvas {
+  width: 250px; }
+  /* line 70, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--left ul > li:hover ul, .quick_nav--offcanvas ul > li:hover ul {
+    display: block; }
+  /* line 75, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--left ul ul, .quick_nav--offcanvas ul ul {
+    display: none; }
+    /* line 77, C:/dev/quicknav/quicknav.scss */
+    .quick_nav--left ul ul li, .quick_nav--offcanvas ul ul li {
+      background-color: #bfbfbf; }
+      /* line 79, C:/dev/quicknav/quicknav.scss */
+      .quick_nav--left ul ul li:hover, .quick_nav--offcanvas ul ul li:hover {
+        background-color: #b3b3b3; }
+
+/* line 87, C:/dev/quicknav/quicknav.scss */
+.quick_nav--offcanvas {
+  position: relative;
+  left: -250px; }
+  /* line 89, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--offcanvas.expanded {
+    left: 0; }
+  /* line 92, C:/dev/quicknav/quicknav.scss */
+  .quick_nav--offcanvas button {
+    background-color: transparent;
+    border: 0; }
+    /* line 95, C:/dev/quicknav/quicknav.scss */
+    .quick_nav--offcanvas button:hover {
+      cursor: pointer; }
+    /* line 98, C:/dev/quicknav/quicknav.scss */
+    .quick_nav--offcanvas button:focus {
+      outline: none; }
+    /* line 101, C:/dev/quicknav/quicknav.scss */
+    .quick_nav--offcanvas button:after {
+      position: absolute;
+      background-color: #ccc;
+      color: #ffffff;
+      content: "MENU";
+      padding: 10px;
+      width: 40px;
+      height: 40px;
+      right: calc(-60px);
+      top: 0;
+      font-size: 14px; }
+
+/* line 119, C:/dev/quicknav/quicknav.scss */
+body {
+  margin: 0;
+  font-family: Arial; }
